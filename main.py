@@ -57,7 +57,7 @@ logger = logging.getLogger()
 #     getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
 #     thumb = "thumb.jpg"
 
-@app.on_message (["stats","status"])
+@app.on_message (["status"])
 async def stats(bot, update):
     back = await handle_force_sub(bot, update)
     if back == 400:
