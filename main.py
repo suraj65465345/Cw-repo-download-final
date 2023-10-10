@@ -57,7 +57,7 @@ logger = logging.getLogger()
 #     getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
 #     thumb = "thumb.jpg"
 
-@app.on_message(pyrogram.filters.private & pyrogram.filters.command(["stats","status"]))
+@app.on_message(pyrogram & pyrogram.(["stats","status"]))
 async def stats(bot, update):
     back = await handle_force_sub(bot, update)
     if back == 400:
@@ -84,7 +84,7 @@ async def stats(bot, update):
     await update.reply_text(botstats)
 
 
-@bot.on_message(filters.command(["start"]))
+@bot.on_message (["start"]))
 async def start(bot, update):
        await update.reply_text("Hi i am **Careerwill Downloader**.\n\n"
                               "**NOW:-** "
@@ -109,7 +109,7 @@ info= {
     "email":"",
 }
 
-@bot.on_message(filters.command(["login"])& ~filters.edited)
+@bot.on_message(["login"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(
         "Send **ID & Password** in this manner otherwise bot will not respond.\n\nSend like this:-  **ID*Password**"
