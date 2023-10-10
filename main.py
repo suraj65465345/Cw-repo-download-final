@@ -84,7 +84,7 @@ async def stats(bot, update):
     await update.reply_text(botstats)
 
 
-@bot.on_message (["start"]))
+@bot.on_message (["start"])
 async def start(bot, update):
        await update.reply_text("Hi i am **Careerwill Downloader**.\n\n"
                               "**NOW:-** "
