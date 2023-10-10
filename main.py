@@ -58,7 +58,8 @@ logger = logging.getLogger()
 #     thumb = "thumb.jpg"
 
 
-@app.on_message (["status"])
+
+@app.on_message(pyrogram.filters.private (["stats","status"]))
 async def stats(bot, update):
     back = await handle_force_sub(bot, update)
     if back == 400:
